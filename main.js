@@ -22,13 +22,11 @@ function numberDoubler(num) {
 // stringRepeater('a')      => 'aaaaaaaaaa'
 // stringRepeater('hotdog') => 'hotdoghotdog'
 function stringRepeater(str) {
-  let repeatedString = "";
-
-  while (str.length <= 10) {
-    str.concat(str);
-    repeatedString = str;
+  let outputStr = str;
+  while (outputStr.length < 10) {
+    outputStr += str;
   }
-  return repeatedString;
+  return outputStr;
 }
 
 // Write a function, makeDivisible, that takes in two numbers, x and y. The
@@ -43,7 +41,11 @@ function stringRepeater(str) {
 // makeDivisible(5, 4)  => 8
 // makeDivisible(16, 5) => 20
 function makeDivisible(x, y) {
-  // Your code here
+  let outputX = x;
+  while (outputX % y !== 0) {
+    outputX++;
+  }
+  return outputX;
 }
 
 module.exports = {
